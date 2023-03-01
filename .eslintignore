@@ -1,4 +1,5 @@
 src/reportWebVitals.js
-vite.config.js
+vite.config.ts
+tailwind.config.cjs
 workers-site/*
 .github

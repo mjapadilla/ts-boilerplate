@@ -1,0 +1,17 @@
+@layer components {
+  .gv-table-container {
+    @apply relative w-full;
+  }
+  .gv-table {
+    @apply table-fixed w-full;
+  }
+  .gv-table-row {
+    @apply even:bg-gray-50 odd:bg-white;
+  }
+  .gv-table-data-left {
+    @apply text-sm font-medium text-gray-700 py-2 pl-3;
+  }
+  .gv-table-data-right {
+    @apply text-sm text-gray-500 py-2 pr-3;
+  }
+}

@@ -25,3 +25,6 @@ dist-ssr
 
 #cache
 .eslintcache
+
+# style
+/src/assets/styles/styles.css

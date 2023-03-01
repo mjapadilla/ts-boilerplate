@@ -1,0 +1,25 @@
+@layer utilities {
+  .top-right {
+    @apply right-2 top-2 bottom-auto left-auto -translate-x-0;
+  }
+
+  .top-left {
+    @apply left-2 top-2 bottom-auto right-auto;
+  }
+
+  .top-center {
+    @apply top-2 left-1/2 -translate-x-1/2;
+  }
+
+  .bottom-right {
+    @apply right-2 bottom-2 left-auto top-auto;
+  }
+
+  .bottom-left {
+    @apply left-2 bottom-2 right-auto top-auto;
+  }
+
+  .bottom-center {
+    @apply bottom-2 right-auto left-1/2 -translate-x-1/2;
+  }
+}

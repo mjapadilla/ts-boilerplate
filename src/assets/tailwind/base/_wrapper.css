@@ -1,0 +1,17 @@
+@layer base {
+  .page-outer-wrapper {
+    @apply flex flex-col w-full h-full md:overflow-hidden;
+  }
+
+  .page-inner-wrapper {
+    @apply w-full flex-1 flex flex-col py-3 md:overflow-y-auto items-center justify-start;
+  }
+
+  .page-wrapper {
+    @apply container w-full flex flex-col flex-1 space-y-3 p-3 -m-3;
+  }
+
+  .with-scroll {
+    @apply md:overflow-hidden;
+  }
+}

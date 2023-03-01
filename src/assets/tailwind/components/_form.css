@@ -1,0 +1,126 @@
+@layer components {
+  /* INPUT */
+  textarea {
+    resize: none;
+  }
+
+  .form-container {
+    @apply relative text-form-inactive focus-within:text-form-active;
+  }
+
+  .form-label {
+    @apply block text-xs font-medium text-gray-800 mb-2;
+  }
+
+  .form-input {
+    @apply placeholder-gray-800 focus:ring-0 focus:outline-none w-full text-gray-800 border border-form-inactive focus:border-form-active rounded px-3 py-2.5 disabled:bg-gray-100 disabled:cursor-not-allowed text-sm flex items-center bg-white;
+  }
+
+  .form-input-file {
+    @apply focus:ring-0 focus:outline-none w-full text-gray-800 border border-form-inactive focus-within:border-red-500 rounded px-3 py-2.5 disabled:bg-gray-100 disabled:cursor-not-allowed text-sm flex items-center bg-white min-h-[42px] max-h-min;
+  }
+
+  .form-input-url {
+    padding-left: 3.7rem;
+  }
+
+  .form-input-prefix {
+    @apply text-form-active text-sm;
+  }
+
+  .form-input-prefix-error {
+    @apply !text-red-500 text-sm;
+  }
+
+  .form-container-error {
+    @apply text-red-400 focus-within:text-red-600 hover:text-red-600;
+  }
+
+  .form-input-error {
+    @apply placeholder-red-600 focus:ring-0 focus:outline-none w-full text-red-500 focus:text-red-500 border border-red-600 rounded px-3 py-2.5 text-sm flex items-center;
+  }
+
+  /* CONTROLS */
+
+  .form-control-container {
+    @apply relative bg-white text-form-inactive focus-within:text-form-active p-3 border border-form-inactive rounded;
+  }
+
+  .form-control-label {
+    @apply ml-3 block w-full text-sm font-medium text-gray-700 cursor-pointer;
+  }
+
+  .form-checkbox {
+    @apply text-primary-500 rounded focus:ring-primary-500 border-form-inactive hover:border-form-active cursor-pointer;
+
+    &:disabled {
+      @apply cursor-not-allowed;
+    }
+  }
+
+  .form-radio {
+    @apply text-primary-500 border-gray-300 focus:ring-primary-500 border-form-inactive hover:border-form-active cursor-pointer;
+
+    &:disabled {
+      @apply cursor-not-allowed;
+    }
+  }
+
+  .form-control-success {
+    @apply text-green-600 border-gray-300 focus:ring-green-600;
+  }
+
+  .form-control-container-error {
+    @apply text-red-600 border border-red-600 rounded p-3 text-sm;
+  }
+
+  .form-control-label-error {
+    @apply ml-3 block text-sm font-medium text-red-600 cursor-pointer;
+  }
+
+  .form-checkbox-error {
+    @apply text-red-600 rounded focus:ring-primary-500 hover:border-red-600 border-red-600 cursor-pointer;
+  }
+
+  .form-radio-error {
+    @apply text-red-600 focus:ring-primary-500 hover:border-red-600 border-red-600 cursor-pointer;
+  }
+
+  /* COMMON */
+  .form-error-badge {
+    @apply flex text-xs absolute -bottom-2 right-2 px-2 bg-red-50 rounded text-red-500;
+  }
+}
+
+.react-tel-input .selected-flag:before {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.react-tel-input .country-list {
+  @apply !max-h-80 xs:!w-64 sm:!w-80 lg:!w-96;
+}
+
+.react-tel-input .country-list .search {
+  @apply !pl-1 !pr-3 !py-3;
+}
+
+.react-tel-input .country-list .search-box {
+  @apply focus:ring-0 focus:outline-none w-full text-form-active border border-gray-300 rounded p-3 text-sm flex items-center bg-white;
+}
+
+.react-tel-input .country-list .no-entries-message {
+  @apply !px-4;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}

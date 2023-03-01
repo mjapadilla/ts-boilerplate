@@ -22,6 +22,36 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'prettier'],
   rules: {
-    'react/react-in-jsx-scope': 0,
+    'react/react-in-jsx-scope': 'off',
+    'no-unused-vars': 'error',
+    'default-param-last': 'off',
+    'prefer-regex-literals': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'import/prefer-default-export': 'off',
+    'react/jsx-no-useless-fragment': 'off',
+    camelcase: 'off',
+    'no-unsafe-optional-chaining': 'off',
+    'jsx-a11y/label-has-associated-control': [
+      2,
+      {
+        assert: 'either',
+      },
+    ],
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'import/order': [
+      'error',
+      {
+        groups: ['builtin', 'external', 'internal'],
+        pathGroups: [
+          {
+            pattern: 'react',
+            group: 'external',
+            position: 'before',
+          },
+        ],
+        pathGroupsExcludedImportTypes: ['react'],
+        'newlines-between': 'always',
+      },
+    ],
   },
 };

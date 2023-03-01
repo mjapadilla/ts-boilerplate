@@ -1,0 +1,23 @@
+@layer components {
+  .gl-list-key-group {
+    @apply bg-gray-100 rounded mr-1;
+    @apply border border-gray-100 border-opacity-50;
+    @apply z-10 sticky top-0 px-2 py-px text-xs font-medium;
+  }
+
+  .gl-list-wrapper {
+    @apply relative z-0;
+    @apply space-y-2 my-2 pr-1;
+  }
+
+  .gl-list-item {
+    @apply relative cursor-pointer flex items-center;
+    @apply px-4 py-3 shadow-sm border border-gray-100 border-opacity-50 rounded;
+    @apply duration-300 ease-in-out transition;
+    @apply hover:bg-gray-200;
+  }
+
+  .gl-list-active-item {
+    @apply bg-gray-200 rounded;
+  }
+}

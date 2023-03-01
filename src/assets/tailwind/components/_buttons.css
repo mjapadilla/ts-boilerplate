@@ -1,0 +1,146 @@
+@layer components {
+  button,
+  button:focus {
+    @apply outline-none;
+  }
+
+  button:disabled {
+    @apply opacity-75;
+    @apply cursor-not-allowed;
+  }
+
+  a.btn {
+    text-align: center;
+    @apply inline-flex items-center justify-center rounded;
+  }
+
+  .btn {
+    @apply px-3 py-2 inline-flex items-center justify-center;
+    @apply text-primary-500 font-medium;
+    @apply text-base tracking-wide;
+    @apply focus:outline-none;
+    @apply rounded text-sm;
+    @apply transition duration-300 ease-in-out;
+    @apply min-h-[38px];
+  }
+
+  .primary {
+    @apply bg-primary-500 text-white;
+    @apply hover:bg-primary-400 focus:bg-primary-400;
+  }
+
+  .primary-outline {
+    @apply border border-primary-500 text-primary-500 bg-white;
+    @apply hover:bg-primary-500 focus:bg-primary-500 hover:text-white;
+  }
+
+  .focus-primary {
+    @apply bg-primary-500;
+  }
+
+  .success {
+    @apply bg-green-700 text-white;
+    @apply hover:bg-green-600 focus:bg-green-600;
+  }
+
+  .focus-success {
+    @apply bg-green-600;
+  }
+
+  .danger {
+    @apply bg-red-700 text-white;
+    @apply hover:bg-red-600 focus:bg-red-600;
+  }
+
+  .danger-outline {
+    @apply bg-white text-red-600 border-red-600 border;
+    @apply hover:bg-red-600 focus:bg-red-600 hover:text-white focus:text-white;
+  }
+
+  .focus-danger {
+    @apply bg-red-600;
+  }
+
+  .warning {
+    @apply bg-yellow-600 text-white;
+    @apply hover:bg-yellow-500 focus:bg-yellow-500;
+  }
+
+  .focus-warning {
+    @apply bg-yellow-500;
+  }
+
+  .info {
+    @apply bg-cyan-600 text-white;
+    @apply hover:bg-cyan-600 focus:bg-cyan-600;
+  }
+
+  .focus-info {
+    @apply bg-cyan-600;
+  }
+
+  .outline {
+    @apply bg-white border border-gray-500 text-gray-700;
+    @apply hover:bg-gray-500 focus:bg-gray-500 hover:text-white focus:text-white;
+  }
+
+  .focus-outline {
+    @apply bg-gray-500 text-white;
+  }
+
+  .light {
+    @apply bg-gray-200 text-gray-900;
+    @apply hover:bg-gray-500 focus:bg-gray-500 hover:text-white focus:text-white;
+  }
+
+  .focus-light {
+    @apply bg-gray-500 text-white;
+  }
+
+  .gray {
+    @apply bg-gray-600 text-white;
+    @apply hover:bg-gray-500 focus:bg-gray-500;
+  }
+
+  .focus-gray {
+    @apply bg-gray-500;
+  }
+
+  .dark {
+    @apply bg-gray-800 text-white;
+    @apply hover:bg-gray-600 focus:bg-gray-600;
+  }
+
+  .focus-dark {
+    @apply bg-gray-600;
+  }
+
+  .line {
+    @apply !px-0 text-gray-600 font-semibold;
+    @apply hover:underline focus:underline;
+  }
+
+  .focus-line {
+    @apply underline;
+  }
+
+  .xs {
+    @apply text-xs py-1 px-1.5 rounded;
+    @apply min-h-[24px];
+  }
+
+  .sm {
+    @apply text-sm py-1 px-2 rounded;
+    @apply min-h-[31px];
+  }
+
+  .md {
+    @apply rounded text-sm;
+    @apply min-h-[42px];
+  }
+
+  .lg {
+    @apply text-base py-2 px-4 rounded-md;
+    @apply min-h-[46px];
+  }
+}
