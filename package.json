@@ -38,7 +38,7 @@
     "vite": "^4.1.0"
   },
   "lint-staged": {
-    "src/**/*.+(js|jsx|json|ts)": "eslint --cache --fix --max-warnings=0",
+    "src/**/*.+(js|jsx|json|ts|tsx)": "eslint --cache --fix --max-warnings=0",
     "*.(js|css|md)": "prettier --write"
   }
 }
