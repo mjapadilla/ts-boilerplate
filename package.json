@@ -9,8 +9,8 @@
     "build:style": "NODE_ENV=production postcss src/assets/tailwind/index.css -o src/assets/styles/styles.css --verbose",
     "start:react": "vite --host",
     "start": "npm-run-all -p watch-tsc watch:style start:react",
-    "build:react": "vite build",
-    "build": "npm-run-all -s watch-tsc build:style build:react",
+    "build:react": "tsc && vite build",
+    "build": "npm-run-all -s build:style build:react",
     "preview": "vite preview --host",
     "prepare": "husky install",
     "pretty": "prettier --write \"**/*.+(js|jsx|json|css|md)\"",
@@ -55,7 +55,10 @@
     "vite-plugin-checker": "^0.5.6"
   },
   "lint-staged": {
-    "src/**/*.+(js|jsx|json|ts|tsx)": "eslint --cache --fix --max-warnings=0",
+    "src/**/*.+(js|jsx|json|ts|tsx)": [
+      "tsc --skipLibCheck --noEmit",
+      "eslint --cache --fix --max-warnings=0"
+    ],
     "*.(js|css|md)": "prettier --write"
   }
 }
