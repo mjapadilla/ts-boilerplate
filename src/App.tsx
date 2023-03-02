@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react';
+import React from 'react';
 
 function App() {
-  const [state, setState] = useState({ name: 'foo' });
+  const [state, setState] = React.useState({ name: 'foo' });
 
-  useEffect(() => {
-    setState({ name: '1' });
+  React.useEffect(() => {
+    setState({ name: '2' });
   }, []);
 
   return (

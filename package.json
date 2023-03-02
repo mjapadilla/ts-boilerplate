@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "watch-tsc": "tsc --watch --noEmit",
+    "watch-tsc": "tsc --watch --skipLibCheck --noEmit",
     "watch:style": "cross-env TAILWIND_MODE=watch postcss -w src/assets/tailwind/index.css -o src/assets/styles/styles.css --verbose",
     "build:style": "NODE_ENV=production postcss src/assets/tailwind/index.css -o src/assets/styles/styles.css --verbose",
     "start:react": "vite --host",
@@ -13,8 +13,8 @@
     "build": "npm-run-all -s build:style build:react",
     "preview": "vite preview --host",
     "prepare": "husky install",
-    "pretty": "prettier --write \"**/*.+(js|jsx|json|ts|tsx|css|md)\"",
-    "lint": "npm run watch-tsc && eslint \"src/**/*.+(js|jsx|json|ts|tsx|json)\"",
+    "pretty": "prettier --write \"**/*.+(json|ts|tsx|css|md)\"",
+    "lint": "npm run watch-tsc && eslint \"src/**/*.+(json|ts|tsx)\"",
     "lint-fix": "npm run lint --cache --fix --max-warnings=0",
     "pre-commit": "lint-staged"
   },
@@ -55,10 +55,9 @@
     "vite-plugin-checker": "^0.5.6"
   },
   "lint-staged": {
-    "src/**/*.+(js|jsx|json|ts|tsx|json)": [
-      "tsc --skipLibCheck --noEmit",
+    "src/**/*.+(ts|tsx|json)": [
       "eslint --cache --fix --max-warnings=0"
     ],
-    "*.(js|css|md)": "prettier --write"
+    "*.(ts|tsx|css|md)": "prettier --write"
   }
 }
