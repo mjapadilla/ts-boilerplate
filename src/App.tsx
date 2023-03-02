@@ -4,9 +4,9 @@ function App() {
   const [state, setState] = React.useState({ name: 'foo' });
 
   React.useEffect(() => {
-    setState({ name: '1' });
+    setState({ name: '3' });
   }, []);
-
+  const a = '';
   return (
     <div className="w-screen h-screen bg-cyan-700 flex">
       <div className="text-white m-auto">
