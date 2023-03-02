@@ -56,8 +56,8 @@
   },
   "lint-staged": {
     "src/**/*.+(ts|tsx|json)": [
-      "tsc --skipLibCheck --noEmit",
-      "eslint --cache --fix --max-warnings=0"
+      "eslint --cache --fix --max-warnings=0",
+      "bash -c tsc --noEmit"
     ],
     "*.(ts|tsx|css|md)": "prettier --write"
   }
