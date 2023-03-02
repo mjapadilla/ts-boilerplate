@@ -1,5 +1,5 @@
 #!/bin/sh
-if ! head -1 "$1" | grep -qE "^(Create|Update|Remove|Setup|Revert)(\(.+?\))? .{1,}$"; then
+if ! head -1 "$1" | grep -qE "^(Create|Update|Remove|Setup|Revert|Resolve)(\(.+?\))? .{1,}$"; then
     echo "Aborting commit. Your commit message is invalid. Please follow commit pattern" >&2
     exit 1
 fi
