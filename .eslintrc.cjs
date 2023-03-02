@@ -20,7 +20,6 @@ module.exports = {
   plugins: ['react', '@typescript-eslint', 'prettier'],
   rules: {
     camelcase: 'off',
-    'no-unused-vars': 'error',
     'default-param-last': 'off',
     'prefer-regex-literals': 'off',
     'react/react-in-jsx-scope': 'off',
@@ -28,6 +27,7 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'import/prefer-default-export': 'off',
     'react/jsx-no-useless-fragment': 'off',
+    '@typescript-eslint/naming-convention': 'off',
     'jsx-a11y/label-has-associated-control': [
       2,
       {
