@@ -13,24 +13,21 @@ module.exports = {
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
     ecmaVersion: 'latest',
     sourceType: 'module',
     project: './tsconfig.json',
   },
   plugins: ['react', '@typescript-eslint', 'prettier'],
   rules: {
-    'react/react-in-jsx-scope': 'off',
+    camelcase: 'off',
     'no-unused-vars': 'error',
     'default-param-last': 'off',
     'prefer-regex-literals': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'no-unsafe-optional-chaining': 'off',
     'react/jsx-props-no-spreading': 'off',
     'import/prefer-default-export': 'off',
     'react/jsx-no-useless-fragment': 'off',
-    camelcase: 'off',
-    'no-unsafe-optional-chaining': 'off',
     'jsx-a11y/label-has-associated-control': [
       2,
       {

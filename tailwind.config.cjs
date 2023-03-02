@@ -21,7 +21,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-sans)', ...defaultTheme.fontFamily.sans],
+        sans: ['var(--font-family)', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         'form-active': 'var(--form-active)',

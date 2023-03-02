@@ -23,8 +23,12 @@ dist-ssr
 *.sln
 *.sw?
 
+# production
+/build
+
 #cache
 .eslintcache
+--fix
 
 # style
 /src/assets/styles/styles.css
