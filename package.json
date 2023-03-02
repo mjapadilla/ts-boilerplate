@@ -13,8 +13,8 @@
     "build": "npm-run-all -s build:style build:react",
     "preview": "vite preview --host",
     "prepare": "husky install",
-    "pretty": "prettier --write \"**/*.+(js|jsx|json|css|md)\"",
-    "lint": "npm run watch-tsc && eslint \"src/**/*.+(js|jsx|json)\"",
+    "pretty": "prettier --write \"**/*.+(js|jsx|json|ts|tsx|css|md)\"",
+    "lint": "npm run watch-tsc && eslint \"src/**/*.+(js|jsx|json|ts|tsx|json)\"",
     "lint-fix": "npm run lint --cache --fix --max-warnings=0",
     "pre-commit": "lint-staged"
   },
@@ -55,7 +55,7 @@
     "vite-plugin-checker": "^0.5.6"
   },
   "lint-staged": {
-    "src/**/*.+(js|jsx|json|ts|tsx)": [
+    "src/**/*.+(js|jsx|json|ts|tsx|json)": [
       "tsc --skipLibCheck --noEmit",
       "eslint --cache --fix --max-warnings=0"
     ],
