@@ -4,7 +4,7 @@ function App() {
   const [state, setState] = React.useState({ name: 'foo' });
 
   React.useEffect(() => {
-    setState({ name: '5' });
+    setState({ name: '1' });
   }, []);
 
   return (
