@@ -1,17 +1,20 @@
+import React from 'react';
+
+import { ScreenLoader } from 'ui/components';
+import { ROOT_SESSION } from 'context/session';
+
+const Public = React.lazy(() => import('pages/public'));
+const Private = React.lazy(() => import('pages/private'));
+
 function App() {
+  const { isAuthenticated } = React.useContext(ROOT_SESSION);
+
   return (
-    <div className="w-screen h-screen bg-cyan-700 flex">
-      <div className="text-white m-auto">
-        <h4 className="text-2xl font-medium">Technology Used:</h4>
-        <ul className="text-lg list-disc pl-7">
-          <li>React</li>
-          <li>Typescript</li>
-          <li>TailwindCss</li>
-          <li>ReactQuery</li>
-          <li>Axios</li>
-        </ul>
-      </div>
-    </div>
+    <>
+      <React.Suspense fallback={<ScreenLoader />}>
+        {isAuthenticated ? <Private /> : <Public />}
+      </React.Suspense>
+    </>
   );
 }
 
