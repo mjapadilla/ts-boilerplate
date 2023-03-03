@@ -1,12 +1,4 @@
-import React from 'react';
-
 function App() {
-  const [state, setState] = React.useState({ name: 'foo' });
-
-  React.useEffect(() => {
-    setState({ name: '1' });
-  }, []);
-
   return (
     <div className="w-screen h-screen bg-cyan-700 flex">
       <div className="text-white m-auto">
@@ -17,7 +9,6 @@ function App() {
           <li>TailwindCss</li>
           <li>ReactQuery</li>
           <li>Axios</li>
-          <li>{state.name}</li>
         </ul>
       </div>
     </div>
