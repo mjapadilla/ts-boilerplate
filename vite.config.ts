@@ -10,8 +10,7 @@ export default defineConfig({
     checker({
       typescript: true,
       eslint: {
-        lintCommand:
-          'eslint --cache --fix --max-warnings=0 "./src/**/*.{json,ts,tsx}"', // for example, lint .ts & .tsx
+        lintCommand: 'eslint --fix --max-warnings=0 "./src/**/*.{json,ts,tsx}"', // for example, lint .ts & .tsx
       },
     }),
   ],
