@@ -24,11 +24,11 @@
     padding-left: 3.7rem;
   }
 
-  .form-input-prefix {
+  .form-input-leading {
     @apply text-form-active text-sm;
   }
 
-  .form-input-prefix-error {
+  .form-input-leading-error {
     @apply !text-red-500 text-sm;
   }
 

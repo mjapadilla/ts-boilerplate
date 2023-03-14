@@ -1,3 +1,3 @@
-import Login from './forms/LoginForm';
+import Login from './containers/Login';
 
 export default Login;
